@@ -9,6 +9,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        "dm-sans": ["DM Sans", "sans-serif"],
+        "dm-serif": ["DM Serif Text", "sans-serif"]
+      },
+      fontSize: {
+        cta: "0.94rem"
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

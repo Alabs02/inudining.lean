@@ -35,7 +35,7 @@ export default function Document() {
     >
       <Head />
       <ReactLenis root>
-        <body className="antialiased w-full min-h-screen flex flex-col intems-center bg-background">
+        <body className="antialiased w-full min-h-screen block bg-muted">
           <RealViewport />
           <Main />
           <NextScript />
