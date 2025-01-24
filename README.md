@@ -32,14 +32,14 @@ The design is clean, modern, and user-friendly, with a focus on accessibility an
 ## 📂 Project Structure
 
 inudining-clone/<br/>
-├── components/ # Reusable UI components<br/>
-├── pages/ # Next.js pages (routes)<br/>
-├── lib/ # Utility functions and helpers<br/>
-├── styles/ # Global and component-specific styles<br/>
-├── firebase/ # Firebase configuration and services<br/>
-├── ai/ # Hugging Face model integration<br/>
-├── public/ # Static assets (images, icons, etc.)<br/>
-└── tailwind.config.js # Tailwind CSS configuration<br/>
+├── components/ *Reusable UI components*<br/>
+├── pages/ *Next.js pages (routes)*<br/>
+├── lib/ *Utility functions and helpers*<br/>
+├── styles/ *Global and component-specific styles*<br/>
+├── firebase/ *Firebase configuration and services*<br/>
+├── ai/ *Hugging Face model integration*<br/>
+├── public/ *Static assets (images, icons, etc.)*<br/>
+└── tailwind.config.js *Tailwind CSS configuration*<br/>
 
 ---
 
