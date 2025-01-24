@@ -48,7 +48,7 @@ const Toolbar = () => {
   }, [query.query]);
 
   return (
-    <motion.nav className="w-full h-[92px] px-5 xl:px-0 py-5 grid place-items-center transition-all duration-300 will-change-auto sticky top-0 bg-muted/65 backdrop-blur-lg backdrop-filter">
+    <motion.nav className="w-full h-[92px] px-5 xl:px-0 py-5 grid place-items-center transition-all duration-300 will-change-auto sticky top-0 bg-muted/65 backdrop-blur-lg backdrop-filter z-50">
       <div className="flex items-center justify-between w-full xl:w-[90%] 2xl:w-[70%] h-full overflow-hidden transition-all duration-300 will-change-auto px-0.5">
         <div className="flex items-center gap-x-2 flex-1">
           <Link

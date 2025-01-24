@@ -68,7 +68,7 @@ const Home = () => {
         <div>
           <h3 className="text-2xl lg:text-3xl text-primary/90 font-dm-serif mb-5">Explore Welcoming Restaurants Nearby</h3>
 
-          <div className="w-full grid grid-cols-1 xl:grid-cols-3 gap-5">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
             {
               records.map((record) => (
                 <LocationCard key={record.id} {...record} />
