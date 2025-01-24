@@ -64,6 +64,7 @@ const Toolbar = () => {
               height={65}
               quality={100}
               priority
+              draggable={false}
               className="size-full object-contain"
             />
           </Link>

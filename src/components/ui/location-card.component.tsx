@@ -8,6 +8,8 @@ import {
   IconClockCancel,
   IconDoorOff,
   IconDropletStar,
+  IconHeartShare,
+  IconHeartSpark,
   IconMapPin,
   IconWorldWww,
   IconWritingSign,
@@ -20,6 +22,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui";
 import { whileTapOptions } from "@/constants";
+import { Circle } from "rc-progress";
 
 const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
   ({ className, fields, ...rest }, ref) => {
@@ -52,8 +55,33 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
               height={900}
               quality={100}
               priority
+              draggable={false}
               className="size-full object-cover object-center rounded-xl"
             />
+
+            <div className="absolute grid grid-cols-1 top-2 right-2 font-dm-sans text-sm bg-transparent shadow-none border-none">
+              <div className="w-full h-full relative flex items-center">
+                <div className="w-auto h-7 pl-1.5 pr-16 text-sm font-dm-sans translate-x-14 font-medium text-primary/90 flex items-center gap-x-1 bg-muted/75 shadow-inner p-1 backdrop-blur-sm backdrop-filter relative z-10 rounded-full overflow-hidden">
+                  <IconHeartSpark
+                    className="fill-accent stroke-accent-700/75"
+                    size={18}
+                  />
+                  <span className="text-inherit">Inclusivity Score</span>
+                </div>
+
+                <div className="size-14 rounded-full bg-muted/65 shadow-inner p-1 backdrop-blur-sm backdrop-filter relative z-20">
+                  <p className="absolute text-sm left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold">
+                    4.5
+                  </p>
+                  <Circle
+                    percent={50}
+                    strokeWidth={15}
+                    strokeColor="rgba(249,167,26, 1)"
+                    trailColor="rgba(81,35,11,0.5)"
+                  />
+                </div>
+              </div>
+            </div>
 
             <div className="absolute bottom-2 left-2 font-dm-sans text-sm rounded-full px-2.5 py-1.5 bg-muted/85 shadow-inner backdrop-blur backdrop-filter">
               Rated {serviceRating}/5 for Service
@@ -131,7 +159,11 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
                     key={index}
                     className="py-0.5 px-1.5 rounded-full text-xs uppercase tracking-wider font-dm-sans font-medium bg-muted-300"
                   >
-                    {index == 0 ? 'African' : index === 1 ? 'Soul Food' : 'Carribean'}
+                    {index == 0
+                      ? "African"
+                      : index === 1
+                      ? "Soul Food"
+                      : "Carribean"}
                   </div>
                 ))}
             </div>

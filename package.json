@@ -25,6 +25,7 @@
     "nanoid": "^5.0.9",
     "next": "15.1.6",
     "nextjs-progressbar": "^0.0.16",
+    "rc-progress": "^4.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-phone-input-2": "^2.15.1",
