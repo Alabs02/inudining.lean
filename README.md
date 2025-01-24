@@ -1,6 +1,6 @@
 # InuDining Lean Proof of Concept - AI-Powered Restaurant Discovery
 
-A modern, AI-powered restaurant discovery platform inspired by Inu Dining. Built with **Next.js**, **Firebase**, and **Hugging Face models**, this project focuses on delivering a seamless user experience with features like restaurant discovery, detailed restaurant pages, and AI-generated reviews. Designed to be lean and scalable, this prototype was crafted in just **4 days** as a proof of concept.
+A modern, AI-powered comunity-centric restaurant discovery platform inspired by Inu Dining. Built with **Next.js**, **Firebase**, and **Hugging Face models**, this project focuses on delivering a seamless user experience with features like restaurant discovery, detailed restaurant pages, and AI-generated reviews. Designed to be lean and scalable, this prototype was crafted in just **4 days** as a proof of concept.
 
 ---
 
@@ -125,7 +125,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## 🙏 Acknowledgments
 - Inspired by (Inu Dining)[https://www.inudining.com/].
-- Built with ❤️ leveraging Next.js, Firebase, and Hugging Face.
+- Crafted with ❤️ to celebrate and uplift the often-overlooked black diner experience.
 
 ---
 
@@ -134,6 +134,3 @@ If you have any questions or feedback, feel free to reach out:
 - (**Alabura Usman**)[https://alabura.com/]
 - **Email**: <a href="mailto:usmanunfolds@alabura.com">usmanunfolds@alabura.com</a>
 
----
-
-> Happy coding! 🚀
