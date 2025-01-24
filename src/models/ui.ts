@@ -26,6 +26,7 @@ export type TFields = {
   createdBy: string;
   location: string;
   name: string;
+  Keywords: string[];
 }
 
 export type LocationCardProps = HTMLMotionProps<"div"> & {

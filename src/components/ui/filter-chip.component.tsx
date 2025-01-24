@@ -20,7 +20,7 @@ const FilterChip: React.FC<UI.FilterChipProps> = React.forwardRef<
       onClick={onClick}
       aria-roledescription="Location Query Button"
       className={cn(
-        "border border-accent-600 py-2 px-4 rounded-full font-dm-sans font-normal capitalize text-cta text-accent-600 hover:text-accent-50 bg-transparent hover:bg-accent-600 transition-colors duration-300 will-change-auto",
+        "border border-accent-600 py-2 px-4 rounded-full font-dm-sans font-normal uppercase tracking-wide text-sm text-accent-600 hover:text-accent-50 bg-transparent hover:bg-accent-600 transition-colors duration-300 will-change-auto",
         className
       )}
     >

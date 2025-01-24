@@ -26,7 +26,7 @@ import { Circle } from "rc-progress";
 
 const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
   ({ className, fields, ...rest }, ref) => {
-    const { picture, name, location, foodRating, serviceRating, websiteURL } =
+    const { picture, name, location, foodRating, serviceRating, websiteURL, Keywords } =
       fields;
 
     const openInNewTab = (url: string) => {
@@ -107,7 +107,7 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
 
           <div className="flex flex-col gap-y-2 px-2 py-4">
             <div className="flex items-center justify-between">
-              <h6 className="flex items-center font-dm-sans text-base xl:text-lg text-primary/90 font-medium capitalize">
+              <h6 className="flex items-center font-dm-sans text-base x:text-[7px] 2xl:text-lg text-primary/90 font-medium capitalize whitespace-nowrap">
                 <span className="mr-1">{name}</span>-
                 <span className="ml-1">
                   <IconMapPin
@@ -152,18 +152,12 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
             </div>
 
             <div className="flex items-center gap-1.5 flex-wrap w-full mb-4">
-              {Array(3)
-                .fill(0)
-                .map((_, index) => (
+              {Keywords.map((keyword, index) => (
                   <div
-                    key={index}
+                    key={`keyword-${index}`}
                     className="py-0.5 px-1.5 rounded-full text-xs uppercase tracking-wider font-dm-sans font-medium bg-muted-300"
                   >
-                    {index == 0
-                      ? "African"
-                      : index === 1
-                      ? "Soul Food"
-                      : "Carribean"}
+                    {keyword}
                   </div>
                 ))}
             </div>
