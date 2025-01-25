@@ -29,12 +29,14 @@ import "@fontsource/dm-serif-text/400-italic.css";
 import type { AppProps } from "next/app";
 import NProgress from "nextjs-progressbar";
 import { Cursor } from "@/core";
+import { Toaster } from "@/components/ui";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Cursor />
-      <Component {...pageProps} className="bg-purple-500" />
+      <Toaster />
+      <Component {...pageProps} />
       <NProgress
         height={2}
         stopDelayMs={200}

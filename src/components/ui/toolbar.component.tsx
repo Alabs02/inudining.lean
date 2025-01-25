@@ -1,24 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Input } from "./input.component";
 import React, { useEffect, useState } from "react";
 import { AnimatedLink } from "./animated-link.component";
-import { Input } from "./input.component";
 import { IconMapPinPlus, IconMapSearch } from "@tabler/icons-react";
 
 import Link from "next/link";
 import Image from "next/image";
 
 // CONSTANTS
-import { ImgPaths, whileTapOptions } from "@/constants";
-import debounce from "lodash/debounce";
 import { cn } from "@/lib";
+import debounce from "lodash/debounce";
 import { useRouter } from "next/router";
+import { ImgPaths, whileTapOptions } from "@/constants";
+import { Dialog, DialogTrigger } from "./dialog.component";
+import { AddRestaurant } from "../forms";
 
 const Toolbar = () => {
   const router = useRouter();
   const { query } = router;
-  
+
   const [searchQuery, setSearchQuery] = useState(query.query || "");
 
   const updateQuery = debounce((value) => {
@@ -39,7 +41,7 @@ const Toolbar = () => {
     const value = e.target.value;
     setSearchQuery(value);
     updateQuery(value);
-  }
+  };
 
   useEffect(() => {
     if (query.query !== searchQuery) {
@@ -75,31 +77,49 @@ const Toolbar = () => {
               value={searchQuery}
               onChange={onSearch}
               placeholder="Search by cuisine, location, or name..."
-              className={cn("w-full h-full rounded-full font-dm-sans px-4 pr-12 border-none shadow-none focus:border-none focus:shadow-none ring-0 focus-visible:ring-0 outline-none focus:outline-none text-cta placeholder:text-cta placeholder:text-primary/90 placeholder:opacity-85")}
+              className={cn(
+                "w-full h-full rounded-full font-dm-sans px-4 pr-12 border-none shadow-none focus:border-none focus:shadow-none ring-0 focus-visible:ring-0 outline-none focus:outline-none text-cta placeholder:text-cta placeholder:text-primary/90 placeholder:opacity-85"
+              )}
             />
 
-            <button type="button" role="search" aria-roledescription="Search for restaurants" className="size-9 p-px border-none outline-none grid place-items-center text-accent-50 rounded-full bg-primary/90 group-focus-within/search:bg-accent-600 group-hover/search:bg-accent-600 absolute top-1/2 -translate-y-1/2 right-1 transition-all duration-300 will-change-auto">
-              <IconMapSearch className="stroke-muted group-focus-within/search:stroke-muted-100 group-hover/search:stroke-muted-100" size={22} />
+            <button
+              type="button"
+              role="search"
+              aria-roledescription="Search for restaurants"
+              className="size-9 p-px border-none outline-none grid place-items-center text-accent-50 rounded-full bg-primary/90 group-focus-within/search:bg-accent-600 group-hover/search:bg-accent-600 absolute top-1/2 -translate-y-1/2 right-1 transition-all duration-300 will-change-auto"
+            >
+              <IconMapSearch
+                className="stroke-muted group-focus-within/search:stroke-muted-100 group-hover/search:stroke-muted-100"
+                size={22}
+              />
             </button>
           </div>
         </div>
 
         <div className="flex items-center gap-x-5">
           <AnimatedLink label="Discover" href="/"></AnimatedLink>
+
           <AnimatedLink
             label="Community Stories"
             href="/community-stories"
           ></AnimatedLink>
-          <motion.button
-            {...whileTapOptions}
-            type="button"
-            aria-label="List Your Restaurant"
-            role="button"
-            className="border flex items-center gap-x-2 font-medium font-dm-sans uppercase py-2.5 px-5 rounded-full text-cta border-none outline-none focus:outline-none shadow-[0px_0px_0px_1px] shadow-primary/25 hover:shadow-muted-200/25 bg-transparent hover:bg-muted-100 hover:text-primary-400 transition-colors duration-200"
-          >
-            <IconMapPinPlus size={20} />
-            <span>List Your Restaurant</span>
-          </motion.button>
+
+          <Dialog>
+            <DialogTrigger asChild>
+              <motion.button
+                {...whileTapOptions}
+                type="button"
+                aria-label="List Your Restaurant"
+                role="button"
+                className="border flex items-center gap-x-2 font-medium font-dm-sans uppercase py-2.5 px-5 rounded-full text-cta border-none outline-none focus:outline-none shadow-[0px_0px_0px_1px] shadow-primary/25 hover:shadow-muted-200/25 bg-transparent hover:bg-muted-100 hover:text-primary-400 transition-colors duration-200"
+              >
+                <IconMapPinPlus size={20} />
+                <span>List Your Restaurant</span>
+              </motion.button>
+            </DialogTrigger>
+
+            <AddRestaurant />
+          </Dialog>
         </div>
       </div>
     </motion.nav>

@@ -34,3 +34,8 @@ export type LocationCardProps = HTMLMotionProps<"div"> & {
   fields: TFields;
   createdTime: string;
 };
+
+export type LinearProgressProps = {
+  progress: number;
+  className?: string;
+}

@@ -156,16 +156,16 @@ body {
 }
 
 /* Webkit-based browsers (Chrome, Edge, Safari) */
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background-color: hsl(var(--muted));
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 10px;
   background-color: hsl(var(--muted));
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   cursor: grab !important;
   background-color: rgba(81, 35, 11, 0.2);
   border-radius: 10px;
@@ -173,14 +173,14 @@ body::-webkit-scrollbar-thumb {
 
 /* Firefox */
 @supports (-moz-appearance: none) {
-  body {
+  * {
     scrollbar-width: thin;
     scrollbar-color: rgba(81, 35, 11, 0.2) hsl(var(--muted));
   }
 }
 
 /* For older versions of Edge (pre-Chromium) */
-body {
+* {
   -ms-overflow-style: scrollbar;
 }
 
