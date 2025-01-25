@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { UI } from "@/models";
@@ -6,9 +8,7 @@ import Image from "next/image";
 import {
   IconClockBolt,
   IconClockCancel,
-  IconDoorOff,
   IconDropletStar,
-  IconHeartShare,
   IconHeartSpark,
   IconMapPin,
   IconWorldWww,
@@ -25,7 +25,7 @@ import { whileTapOptions } from "@/constants";
 import { Circle } from "rc-progress";
 
 const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
-  ({ className, fields, ...rest }, ref) => {
+  ({ className, fields, createdTime, id,  ...rest }, ref) => {
     const { picture, name, location, foodRating, serviceRating, websiteURL, Keywords } =
       fields;
 
@@ -46,7 +46,7 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
 
     return (
       <>
-        <motion.div ref={ref} {...rest} className={cn("w-full", className)}>
+        <motion.div ref={ref} className={cn("w-full", className)}>
           <div className="w-full h-56 relative overflow-hidden rounded-xl shadow-[0px_0px_0px_1px] shadow-primary/10">
             <Image
               src={picture.src}
@@ -105,7 +105,7 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
             </TooltipProvider>
           </div>
 
-          <div className="flex flex-col gap-y-2 px-2 py-4">
+          <div className="flex flex-col gap-y-2.5 px-2 py-4">
             <div className="flex items-center justify-between">
               <h6 className="flex items-center font-dm-sans text-base x:text-[7px] 2xl:text-lg text-primary/90 font-medium capitalize whitespace-nowrap">
                 <span className="mr-1">{name}</span>-

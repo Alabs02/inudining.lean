@@ -28,10 +28,12 @@ import "@fontsource/dm-serif-text/400-italic.css";
 // TYPES
 import type { AppProps } from "next/app";
 import NProgress from "nextjs-progressbar";
+import { Cursor } from "@/core";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Cursor />
       <Component {...pageProps} className="bg-purple-500" />
       <NProgress
         height={2}

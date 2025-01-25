@@ -9,7 +9,7 @@ export const records = [
       ethnicity: "",
       picture: {
         alt: "42 Holborn.png",
-        src: "https://v5.airtableusercontent.com/v3/u/37/37/1737748800000/T2LawbWbaTAE_sogamIQ2Q/eeJXQkgi9IU_wMXNX5F1VX2YaCZw3ctjl_iPEAPWe0I5GvEfiEn-IvjRMQzupnFBcdS_O9CWLk1hDDBcCx4WnziBXH9Lh6-O9aWkj-_4KC-gelGVEM7UIb8ZPaSYoI6tnJqwyfQNYZxRk2y1_KrIIg/Qrs01AK65mIFNkHG74rjEfqiueAwCaVLJsYNLBVkvNc",
+        src: "/images/1.png"
       },
       foodRating: "3.5",
       createdBy: "inu",
@@ -28,7 +28,7 @@ export const records = [
       ethnicity: "",
       picture: {
         alt: "45 Jermyn street.png",
-        src: "https://v5.airtableusercontent.com/v3/u/37/37/1737748800000/lRAe0nPqhEHxQIrpofon2w/-5nBFylwn70GitO82YQFJsMwKuxsI8YA2OqSmIYtEIv9v-CIDmHdH1v9PRqLNQmxI8jLiIh6cwStlXM3OwBUGwWe_bUNnKyAPU_kYk2O5eykgsYi-ezycHz_P27WQNGlsY-4lyouYp1d22VDCDO1lA/hrlfBi9C1LERVgauS46tMpLpFBJSswnJFS2fMDTv0TE",
+        src: "/images/2.png"
       },
       foodRating: "4",
       createdBy: "inu",
@@ -47,7 +47,7 @@ export const records = [
       ethnicity: "",
       picture: {
         alt: "081 Pizzeria.png",
-        src: "https://v5.airtableusercontent.com/v3/u/37/37/1737748800000/Ue6dfQJ3aQG8DyS7JzQ55Q/X8TX1ZYJAlqYxHaVszCINBENIFd2OVFtf7sNmu-a3eNVXQcEJOLn2XrjEq6hr7d6a2TAxj-uvSU8IKeff2rgveVc23b4UHVuqp86O6o9oi8VJOXX3T3txrHlck7zpOoGlQ-k2j7WiWHzWsXpibQSNg/MSu4OaLGqmrp5uRN8F_2RMyqj8BmscV1eyFj8XxwEsg",
+        src: "/images/3.png"
       },
       foodRating: "4",
       createdBy: "inu",
@@ -66,7 +66,7 @@ export const records = [
       ethnicity: "",
       picture: {
         alt: "West Kensington Image",
-        src: "https://v5.airtableusercontent.com/v3/u/37/37/1737748800000/l-pyBs_lT9pORbb7Q_pNhg/tZxi3DmoUQ17TLDr1HTAMXkmeR1oEmHi7XOdN6D5XyML4FJBI0WM36zuOM33VSVfQ0EzMMiuqg0vOfssOt6w8bMrYq-oGFU5BEwEXmmjCLnnnyJPDyKBDzp3ydUB4wKj7oRQzoAYpNbrb8YGhEtYC3bD63ELXPN0cQH7pOJSDZQ/ls09Uz-qgoJOB45bhRtTK0MukkugKVhogiyChDwDQmE",
+        src: "/images/4.png"
       },
       foodRating: "5",
       createdBy: "inu",
@@ -85,7 +85,7 @@ export const records = [
       ethnicity: "",
       picture: {
         alt: "Agora.png",
-        src: "https://v5.airtableusercontent.com/v3/u/37/37/1737748800000/ihmz-17g3tCEE4EzkjNlSg/opPrBD2Z7qkDK99RfeCmZJilpqO2rq9PNVcPKbX-twXuViSGOrsTGiAz52wUJlLqGv3e5_NOl0ifd7xeCY6NJZKljNlUHwEJGvUYs3LA68Vwh5HXNiTtb-tyb0En89AAvgCVWqoQ6TQUMKQU0qUclQ/cOFBR2jpOycpqJ2xm_i5aVpsxt6AGJTVJ3odXkvXxDU",
+        src: "/images/5.png"
       },
       foodRating: "4",
       createdBy: "inu",
@@ -104,7 +104,7 @@ export const records = [
       ethnicity: "",
       picture: {
         alt: "Akara.png",
-        src: "https://v5.airtableusercontent.com/v3/u/37/37/1737748800000/LUPSTzZLNOZ5sG8Zo6P_Rg/5UkFIo8uFLefe5zk5qBsyvkfreQTtO6X2h4US7EECsWrQPdR2s4KZ9o3OkNsUhxYa87uYj19UNcLL31hDhV93mERh48Tzw1Hndiwyto4cMKSGfEiICaEkxMgetiM9Po1eQAB-T_XPq43d140iRSJeQ/q48JUfhCuS_4S-ijdxqEJQFAYA0OWcPhtz63RVx2m20",
+        src: "/images/6.png"
       },
       foodRating: "4.5",
       createdBy: "inu",

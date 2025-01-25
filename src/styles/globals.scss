@@ -140,6 +140,7 @@ body {
 
 html,
 body {
+  cursor: none !important;
   background: hsl(var(--muted)) !important;
 }
 
@@ -165,6 +166,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
+  cursor: grab !important;
   background-color: rgba(81, 35, 11, 0.2);
   border-radius: 10px;
 }
@@ -181,4 +183,37 @@ body::-webkit-scrollbar-thumb {
 body {
   -ms-overflow-style: scrollbar;
 }
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: hsla(38, 82%, 43%, 1);
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid hsla(21, 76%, 18%, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  pointer-events: none;
+  transition: transform 0.02s ease, width 0.02s ease, height 0.02s ease, top 0.02s ease, left 0.02s ease;
+  will-change: transform, width, height, left, top;
+}
+
+.cursor-outline {
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease !important;
+  will-change: transform, width, height, left, top !important;
+}
+
+
+
 

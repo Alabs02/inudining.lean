@@ -13,7 +13,6 @@ const FilterChip: React.FC<UI.FilterChipProps> = React.forwardRef<
   return (
     <motion.button
       ref={ref}
-      {...rest}
       {...whileTapOptions}
       role="button"
       aria-label={label}
