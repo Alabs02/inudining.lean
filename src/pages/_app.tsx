@@ -34,7 +34,7 @@ import { Toaster } from "@/components/ui";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <Toaster />
       <Component {...pageProps} />
       <NProgress

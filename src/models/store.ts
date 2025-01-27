@@ -13,9 +13,20 @@ export type LocationContact = {
   website: string;
 }
 
+export type Schedule = {
+  weekdays_opening_hours: number;
+  weekdays_opening_mins: number;
+  weekdays_closing_hours: number;
+  weekdays_closing_mins: number;
+  weekends_opening_hours: number;
+  weekends_opening_mins: number;
+  weekends_closing_hours: number;
+  weekends_closing_mins: number;
+}
+
 export type DiningDetails = {
-  openingHours: Record<string, string>;
-  priceRange: string;
+  schedule: Schedule;
+  priceAverage: number;
   vibe: string;
   guestCapacity: number;
   outdoorSeating: boolean;
@@ -24,7 +35,7 @@ export type DiningDetails = {
 export type PhotosMenu = {
   photos: File[];
   menu: File | null;
-  signatureDishes: string[];
+  signatureDishes: string;
 }
 
 export type  InclusivityDetails = {

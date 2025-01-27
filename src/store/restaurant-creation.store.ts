@@ -30,16 +30,25 @@ const initialState: Omit<
     website: "",
   },
   diningDetails: {
-    openingHours: {},
-    priceRange: "",
+    schedule: {
+      weekdays_opening_hours: 0,
+      weekdays_opening_mins: 0,
+      weekdays_closing_hours: 0,
+      weekdays_closing_mins: 0,
+      weekends_opening_hours: 0,
+      weekends_opening_mins: 0,
+      weekends_closing_hours: 0,
+      weekends_closing_mins: 0
+    },
+    priceAverage: 0,
     vibe: "",
-    guestCapacity: 0,
+    guestCapacity: 10,
     outdoorSeating: false,
   },
   photosMenu: {
     photos: [],
     menu: null,
-    signatureDishes: [],
+    signatureDishes: "",
   },
   inclusivityDetails: {
     features: [],

@@ -140,7 +140,7 @@ body {
 
 html,
 body {
-  cursor: none !important;
+  // cursor: none !important;
   background: hsl(var(--muted)) !important;
 }
 
@@ -214,6 +214,15 @@ body {
   will-change: transform, width, height, left, top !important;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
 
 
 

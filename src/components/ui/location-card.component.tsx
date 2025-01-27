@@ -9,8 +9,8 @@ import {
   IconClockBolt,
   IconClockCancel,
   IconDropletStar,
-  IconHeartSpark,
   IconMapPin,
+  IconSparkles,
   IconWorldWww,
   IconWritingSign,
 } from "@tabler/icons-react";
@@ -62,7 +62,7 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
             <div className="absolute grid grid-cols-1 top-2 right-2 font-dm-sans text-sm bg-transparent shadow-none border-none">
               <div className="w-full h-full relative flex items-center">
                 <div className="w-auto h-7 pl-1.5 pr-16 text-sm font-dm-sans translate-x-14 font-medium text-primary/90 flex items-center gap-x-1 bg-muted/75 shadow-inner p-1 backdrop-blur-sm backdrop-filter relative z-10 rounded-full overflow-hidden">
-                  <IconHeartSpark
+                  <IconSparkles
                     className="fill-accent stroke-accent-700/75"
                     size={18}
                   />
@@ -108,16 +108,16 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
           <div className="flex flex-col gap-y-2.5 px-2 py-4">
             <div className="flex items-center justify-between">
               <h6 className="flex items-center font-dm-sans text-base x:text-[7px] 2xl:text-lg text-primary/90 font-medium capitalize whitespace-nowrap">
-                <span className="mr-1">{name}</span>-
-                <span className="ml-1">
+                {name} - {location}
+              </h6>
+
+              {/* <span className="ml-1">
                   <IconMapPin
                     aria-hidden={true}
                     className="stroke-accent-600 mr-0.5"
                     size={18}
                   />
-                </span>
-                {location}
-              </h6>
+                </span> */}
 
               <TooltipProvider>
                 <Tooltip>

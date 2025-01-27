@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib";
 import { usePathname } from "next/navigation";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 const AnimatedLink: React.FC<UI.AnimatedLinkProps> = ({
   label,
