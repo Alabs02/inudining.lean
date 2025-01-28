@@ -1,3 +1,4 @@
+export * from "./blur-fade.component";
 export * from "./input.component";
 export * from "./slider.component";
 export * from "./textarea.component";
@@ -14,3 +15,4 @@ export * from "./filter-chip.component";
 export * from "./animated-link.component";
 export * from "./location-card.component";
 export * from "./dropdown-menu.component";
+export * from "./review-panel.component";

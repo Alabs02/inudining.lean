@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FilterChip, LocationCard, Toolbar } from "@/components/ui";
+import { BlurFade, FilterChip, LocationCard, Toolbar } from "@/components/ui";
 import { nanoid } from "nanoid";
 import { useRouter } from "next/router";
 import kebabCase from "lodash/kebabCase";
@@ -72,8 +72,10 @@ const Home = () => {
 
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 transition-all duration-300">
             {
-              records.map((record) => (
-                <LocationCard key={record.id} {...record} />
+              records.map((record, idx) => (
+                <BlurFade key={record.id} delay={0.25 + idx * 0.05} inView>
+                  <LocationCard {...record} />
+                </BlurFade>
               ))
             }
           </div>

@@ -6,11 +6,13 @@ import { UI } from "@/models";
 import { cn } from "@/lib";
 import Image from "next/image";
 import {
+  IconClock,
   IconClockBolt,
   IconClockCancel,
   IconDropletStar,
   IconMapPin,
   IconSparkles,
+  IconStar,
   IconWorldWww,
   IconWritingSign,
 } from "@tabler/icons-react";
@@ -23,11 +25,19 @@ import {
 } from "@/components/ui";
 import { whileTapOptions } from "@/constants";
 import { Circle } from "rc-progress";
+import Link from "next/link";
 
 const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
-  ({ className, fields, createdTime, id,  ...rest }, ref) => {
-    const { picture, name, location, foodRating, serviceRating, websiteURL, Keywords } =
-      fields;
+  ({ className, fields, createdTime, id, ...rest }, ref) => {
+    const {
+      picture,
+      name,
+      location,
+      foodRating,
+      serviceRating,
+      websiteURL,
+      Keywords,
+    } = fields;
 
     const openInNewTab = (url: string) => {
       if (!url) {
@@ -111,19 +121,31 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
                 {name} - {location}
               </h6>
 
-              {/* <span className="ml-1">
+              <div className="flex items-center">
+                <span className="ml-1">
                   <IconMapPin
                     aria-hidden={true}
                     className="stroke-accent-600 mr-0.5"
                     size={18}
                   />
-                </span> */}
+                </span>
+
+                <span className="text-primary/90 text-sm">20 km</span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-x-1 text-sm xl:text-base text-primary/90">
+                <IconClock className="stroke-accent-600" size={18} />
+
+                <span className="text-inherit">8 AM - 23 PM</span>
+              </div>
 
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="flex item-center font-dm-sans text-sm text-primary/90 gap-x-0.5">
                     <span>{foodRating}</span>
-                    <IconDropletStar
+                    <IconStar
                       className="fill-accent stroke-accent-700/75"
                       aria-hidden={true}
                       size={18}
@@ -138,40 +160,29 @@ const LocationCard = React.forwardRef<HTMLDivElement, UI.LocationCardProps>(
               </TooltipProvider>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-x-1 text-sm xl:text-base text-primary/90">
-                <IconClockBolt className="stroke-accent-600" size={18} />
-
-                <span className="text-inherit">18 - 28 mins</span>
-              </div>
-
-              <div className="flex items-center gap-x-1 text-sm xl:text-base text-destructive-600/90">
-                <IconClockCancel className="stroke-destructive" size={18} />
-                <span className="text-inherit">closed</span>
-              </div>
-            </div>
-
             <div className="flex items-center gap-1.5 flex-wrap w-full mb-4">
               {Keywords.map((keyword, index) => (
-                  <div
-                    key={`keyword-${index}`}
-                    className="py-0.5 px-1.5 rounded-full text-xs uppercase tracking-wider font-dm-sans font-medium bg-muted-300"
-                  >
-                    {keyword}
-                  </div>
-                ))}
+                <div
+                  key={`keyword-${index}`}
+                  className="py-0.5 px-1.5 rounded-full text-xs uppercase tracking-wider font-dm-sans font-medium bg-muted-300"
+                >
+                  {keyword}
+                </div>
+              ))}
             </div>
 
             <div className="w-full">
-              <motion.button
-                {...whileTapOptions}
-                type="button"
-                aria-label={"Rate & Review"}
-                className="flex items-center justify-center w-full gap-x-2 py-2.5 px-5 rounded-full uppercase text-cta font-medium tracking-wide shadow-[0px_0px_0px_1px] shadow-primary/10 hover:shadow-muted-200/25 bg-transparent hover:bg-muted-100 hover:text-primary-400 overflow-hidden transition-colors duration-200"
-              >
-                <IconWritingSign aria-hidden={true} size={22} />
-                <span>Rate & Review</span>
-              </motion.button>
+              <Link href={"/42-holborn"} passHref>
+                <motion.button
+                  {...whileTapOptions}
+                  type="button"
+                  aria-label={"Rate & Review"}
+                  className="flex items-center justify-center w-full gap-x-2 py-2.5 px-5 rounded-full uppercase text-cta font-medium tracking-wide shadow-[0px_0px_0px_1px] shadow-primary/10 hover:shadow-muted-200/25 bg-transparent hover:bg-muted-100 hover:text-primary-400 overflow-hidden transition-colors duration-200"
+                >
+                  <IconWritingSign aria-hidden={true} size={22} />
+                  <span>Rate & Review</span>
+                </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>
